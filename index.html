@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Verde — Ropa deportiva</title>
+
+  <!-- Bootstrap 5 CDN -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --verde-oscuro: #0d3d29;
+      --verde-medio: #14532d;
+      --blanco: #ffffff;
+      --gris-suave: #f5f7f6;
+    }
+
+    body {
+      background-color: var(--blanco);
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--verde-oscuro);
+    }
+
+    .navbar {
+      background-color: var(--verde-oscuro) !important;
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: var(--blanco) !important;
+      font-weight: 600;
+    }
+
+    .nav-link:hover {
+      color: #cfe8da !important;
+    }
+
+    .hero {
+      background-color: var(--verde-oscuro);
+      color: var(--blanco);
+      padding: 4.5rem 1rem;
+    }
+
+    .hero h1 {
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .btn-blanco {
+      background-color: var(--blanco);
+      color: var(--verde-oscuro);
+      border: 2px solid var(--blanco);
+      font-weight: 600;
+    }
+
+    .btn-blanco:hover {
+      background-color: transparent;
+      color: var(--blanco);
+    }
+
+    .card {
+      border: 1px solid #e0e6e2;
+      background-color: var(--blanco);
+    }
+
+    .card-title {
+      color: var(--verde-oscuro);
+      font-weight: 700;
+    }
+
+    .precio {
+      color: var(--verde-medio);
+      font-weight: 700;
+    }
+
+    .btn-verde {
+      background-color: var(--verde-oscuro);
+      color: var(--blanco);
+      border: none;
+      font-weight: 600;
+    }
+
+    .btn-verde:hover {
+      background-color: var(--verde-medio);
+      color: var(--blanco);
+    }
+
+    section.fondo-gris {
+      background-color: var(--gris-suave);
+    }
+
+    footer {
+      background-color: var(--verde-oscuro);
+      color: #d8e8de;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. NAVBAR (responsive, colapsable en móvil) -->
+  <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Tienda Verde</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Abrir menú de navegación"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="#inicio">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#productos">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero text-center" id="inicio">
+    <div class="container">
+      <h1 class="display-5 rounded">Ropa deportiva hecha para moverte</h1>
+      <p class="lead mt-3">
+        Prendas cómodas y resistentes, pensadas para entrenar, correr
+        y vivir activo todos los días.
+      </p>
+      <button
+        type="button"
+        class="btn btn-blanco btn-lg mt-3 shadow"
+        data-bs-toggle="modal"
+        data-bs-target="#modalBienvenida"
+      >
+        Conoce más sobre nosotros
+      </button>
+    </div>
+  </header>
+
+  <!-- 2. SISTEMA DE GRILLA: 3 columnas en escritorio, 2 en tablet, 1 en móvil -->
+  <section class="container my-5" id="productos">
+    <h2 class="text-center mb-4 fw-bold" style="color: var(--verde-oscuro);">
+      Nuestros productos
+    </h2>
+
+    <div class="row g-4">
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow rounded">
+          <img
+            src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=600&h=400&fit=crop"
+            class="card-img-top rounded-top"
+            alt="Camiseta tipo jugador"
+          >
+          <div class="card-body">
+            <h5 class="card-title">Camiseta tipo jugador</h5>
+            <p class="card-text">
+              Réplica con los mismos cortes y materiales del uniforme
+              de competencia, con parches y numeración bordada.
+            </p>
+            <p class="precio mb-0">$110.000</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow rounded">
+          <img
+            src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600&h=400&fit=crop"
+            class="card-img-top rounded-top"
+            alt="Zapatillas originales"
+          >
+          <div class="card-body">
+            <h5 class="card-title">Zapatillas originales</h5>
+            <p class="card-text">
+              Modelos 100% originales, con caja y garantía de fábrica,
+              disponibles en las últimas referencias de temporada.
+            </p>
+            <p class="precio mb-0">$300.000</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-12 col-lg-4">
+        <div class="card h-100 shadow rounded">
+          <img
+            src="https://images.unsplash.com/photo-1517649763962-0c623066013b?w=600&h=400&fit=crop"
+            class="card-img-top rounded-top"
+            alt="Elementos deportivos"
+          >
+          <div class="card-body">
+            <h5 class="card-title">Elementos deportivos</h5>
+            <p class="card-text">
+              Balones, guayos, guantes y demás accesorios para practicar
+              tu disciplina favorita con el equipo adecuado.
+            </p>
+            <p class="precio mb-0">$59.000</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. Sección extra con más clases utilitarias -->
+  <section class="fondo-gris py-5 text-center" id="contacto">
+    <div class="container">
+      <h2 class="fw-bold mb-3" style="color: var(--verde-oscuro);">
+        ¿Listo para tu próximo reto?
+      </h2>
+      <p class="mb-4">
+        Escríbenos y te daremos la mejor asesoria.
+      </p>
+      <a href="oscar:verdolaga@tiendaverde.com" class="btn btn-verde m-3">
+        verdolaga@tiendaverde.com
+      </a>
+    </div>
+  </section>
+
+  <!-- 3. MODAL -->
+  <div
+    class="modal fade"
+    id="modalBienvenida"
+    tabindex="-1"
+    aria-labelledby="modalBienvenidaLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" id="modalBienvenidaLabel">
+            Bienvenido a Tienda Verde
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Cerrar"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Somos una tienda dedicada a la ropa y calzado deportivo,
+            con materiales de calidad y precios justos para acompañarte
+            en cada rutina.
+          </p>
+          <p class="mb-0">
+            Horario de atención: lunes a sábado, de 9:00 a.m. a 8:00 p.m.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Cerrar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center py-4">
+    <p class="mb-0">&copy; 2026 Tienda Verde. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Bootstrap Bundle JS (incluye Popper, necesario para el modal y el navbar) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
